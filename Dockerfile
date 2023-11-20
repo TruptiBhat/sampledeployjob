@@ -1,11 +1,14 @@
 # Use an official OpenJDK runtime as a base image
-FROM openjdk:11-jre-slim
+FROM openjdk:11
 
 # Set the working directory in the container
-WORKDIR ./
+WORKDIR /usr/src/app
 
-# Copy the application JAR file into the container
-COPY ./javaapp.jar .
+# Copy the current directory contents into the container at /usr/src/app
+COPY . .
 
-# Specify the command to run your application
-CMD ["java", "-jar", "javaapp.jar"]
+# Compile the Java program
+RUN javac Deploy.java
+
+# Specify the default command to run when the container starts
+CMD ["java", "Deploy"]

@@ -1,11 +1,7 @@
-# Use the official Nginx image as the base image
-FROM nginx:latest
+# Use the official OpenJDK base image
+FROM openjdk:11-jre-slim
 
-# Copy custom configuration file (optional)
-COPY nginx.conf /etc/nginx/nginx.conf
+# Set the working directory
+WORKDIR /app
 
-# Expose port 80
-EXPOSE 80
-
-# Command to run when the container starts
-CMD ["nginx", "-g", "daemon off;"]
+#

@@ -7,4 +7,4 @@ spec:
   interval: 30s
   ref:
     branch: master
-  url: https://github.com/TruptiBhat/SampleDeployJob
+  url: https://github.com/TruptiBhat/sampledeployjob

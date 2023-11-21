@@ -9,5 +9,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: SampleDeployJob
+    name: sampledeployjob
   targetNamespace: default

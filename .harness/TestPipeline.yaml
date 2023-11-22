@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: javac Deploy.java
+                        script: echo "Hello world"
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m

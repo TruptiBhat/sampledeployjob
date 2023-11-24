@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: javaapp
-        image: truptibhat/jdkimage:latest
+        image: truptibhat/nginximage
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

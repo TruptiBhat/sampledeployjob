@@ -28,3 +28,16 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+  notificationRules:
+    - name: testNotify
+      identifier: testNotify
+      pipelineEvents:
+        - type: PipelineFailed
+        - type: PipelineSuccess
+      notificationMethod:
+        type: Email
+        spec:
+          userGroups: []
+          recipients:
+            - trupti.bhat@slkgroup.com
+      enabled: true

@@ -27,6 +27,9 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
+                  enforce:
+                    policySets:
+                      - Test1
         tags: {}
   notificationRules:
     - name: testNotify
